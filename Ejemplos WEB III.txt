@@ -1,0 +1,48 @@
+Ejemplo 1: 
+
+<h1>MAYOR DE 2 NUMEROS</h1>
+    <form action="" method="post">
+        <label for="">Escribe un numero</label><br>
+        <input type="number" name="num1"><br>
+        <label for="">Escribe otro numero</label><br>
+        <input type="number" name="num2"><br><br>
+        <input type="submit" value="Mayor">
+    </form>
+    <?php
+        if($_POST){
+            $x=$_POST["num1"];
+            $y=$_POST["num2"];
+            if($x==$y){
+                echo $x. " es igual a " .$y;
+            }
+            elseif($x>$y){
+                echo " El mayor es: " .$x;
+            }
+            else{
+                echo " El mayor es: " .$y;
+            }
+        }   
+    ?>
+
+
+------------------  ejemplo 2: FACTORIAL ----------------------
+
+<h1> FACTORIAL </h1>
+    <form action="" method="post">
+        <label for="">Escribe un numero</label><br>
+        <input type="number" name="num"><br><br>
+        <input type="submit" value="Mostrar">
+        <input type="reset" value="Limpiar"> <br><br>
+    </form>
+    <?php
+        if($_POST){
+            $x=$_POST["num"];
+            $f=1;
+            $c=1;
+            while($c<=$x){
+                $f=$f*$c;
+                $c++;
+            }
+            echo "El factorial de " .$x. " es: ".$f;
+        }
+    ?>
