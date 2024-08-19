@@ -46,3 +46,93 @@ Ejemplo 1:
             echo "El factorial de " .$x. " es: ".$f;
         }
     ?>
+------------------  ejemplo 3: FIBONACCI ----------------------
+
+<h1> FIBONACCI </h1>
+    <form action="" method="post">
+        <label for="">Escribe un numero</label><br>
+        <input type="number" name="num"><br><br>
+        <input type="submit" value="Generar">
+        <input type="reset" value="Limpiar"> <br><br>
+    </form>
+    <?php
+        if($_POST){
+            $x=$_POST["num"];
+            $fibo="";
+            $c=1;
+            $a=-1;
+            $b=1;
+            for($c=1;$c<=$x;$c++){
+                $fi=$a+$b;
+                $fibo=$fibo." ".$fi;
+                $a=$b;
+                $b=$fi;
+            }
+            echo "La serie fibonacci es: ".$fibo;
+        }
+    ?>
+
+------------------  Ejercicio 1: Triangulo ----------------------
+<h1>Triangulo</h1>
+    <form action="" method="post">
+        <label for="">Introduzca el lado a del triangulo</label><br>
+        <input type="number" name="num1"><br>
+        <label for="">Introduzca el lado b del triangulo<</label><br>
+        <input type="number" name="num2"><br><br>
+        <label for="">Introduzca el lado c del triangulo<</label><br>
+        <input type="number" name="num3"><br><br>
+        <input type="submit" value="Tipo">
+    </form>
+    <?php
+        if($_POST){
+            $x=$_POST["num1"];
+            $y=$_POST["num2"];
+            $z=$_POST["num3"];
+            if(($x==$y) and ($y==$z) and ($z==$x)){
+                echo "El triangulo es EQUILATERO";
+            }
+            elseif($x==$y){
+                echo "El triangulo es ISOSCELES";
+            }
+            elseif($x==$z){
+                echo " El mayor es ISOSCELES" .$x;
+            }
+            elseif($z==$y){
+                echo "El triangulo es ISOSCELES";
+            }
+            else{
+                echo "El triangulo es ESCALENO";
+            }
+        }   
+    ?>
+-------ejer2(incompleto).-------
+<h1> FACTORIAL DE NUMEROS PARES </h1>
+    <form action="" method="post">
+        <label for="">Escribe un numero</label><br>
+        <input type="number" name="num"><br><br>
+        <input type="submit" value="Mostrar">
+        <input type="reset" value="Limpiar"> <br><br>
+    </form>
+    <?php
+        if($_POST){
+            
+            $x=$_POST["num"];
+            echo "Si n = ".$x;
+            $fibo="";
+            $c=1;
+            $c2=1;
+            $a=2;
+            $b=1;
+            for($c=1;$c<=$x;$c++){
+                
+                for($c2=1;$c<=$b;$c++){
+                    $res=$a*$c;
+                }
+                echo "El factorial de ".$a." es: ".$res;
+                $a=$a+2;
+                $b=$a;
+                
+
+            }
+        }
+    ?>
