@@ -1,0 +1,132 @@
+https://www.programiz.com/online-compiler/6lOwNYEVbXxK2
+https://www.programiz.com/online-compiler/5gft8GctGuEzP
+https://www.programiz.com/online-compiler/4Hdn09t7lLKh9
+https://www.programiz.com/online-compiler/3ZzpaN2YPc0vm
+--------------------------------------------------------
+***Descargar el archivo "Comparto.zip" de telegram ***
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <?php include "includes/header.php";?>
+    <form action="" method="post">
+        <label action="">Escribe un numero</label>
+        <input type="text" name="num1" id="">
+        <label action="">Escribe otro numero</label>
+        <input type="text" name="num2" id="">
+        <input type="submit" value="Mostrar">
+    </form>
+    <?php 
+        if($_POST){
+            $x=$_POST("num1");
+            $y=$_POST("num2");
+            echo " mayor es ".max($x,$y)." <br>" ; 
+            echo " menor es ".min($x,$y)." <br>";  
+            echo " La potencia de ".min($x,$y)." elevado a ".max($x,$y)." es: ".pow(min($x,$y),max($x,$y));
+            echo " La raiz cuadrada de ".$x. " es ".sqrt($x)."<br>";
+            echo " La raiz cuadrada de ".$y. " es ".sqrt($y)."<br>"; 
+            echo " El logaritmo de ".$y. " en base 10 es ".log10($y)."<br>";
+            $a=(1/rand(2,5));
+            echo " Un numero aleatorio es: ".$a. " y su redondeo es: ".round($a);       
+        }
+    ?>
+    <?php include "includes/footer.php";    ?>
+</body>
+</html>
+
+---------------------------------------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <?php include "includes/header.php";?>
+    <form action="" method="post">
+        <label action="">Escribe tu nombre</label>
+        <input type="text" name="nom" id="">
+        <label action="">Escribe tu cprreo</label>
+        <input type="email" name="cor" id="">
+        <input type="submit" value="Mostrar">
+    </form>
+    <?php 
+        if($_POST){
+            $nombre=$_POST("nom");
+            $correo =$_POST("cor");
+            echo " Tu nombre es: ".$nombre." y tu correo es: {$correo} <br>";
+            echo " La cantidad de caracteristicas ede tu nombre es " .strlen($nombre);
+            echo "<br> tu nombre en minusculas es: ".strtolower($nombre);
+            echo "<br> tu nombre en mayusculas es: ".strtoupper($nombre);
+            // verificar si una letra ese encuentra eb la cadena
+            echo "<br> vemos si el correo, es gmail nos muestra la posicion: ".strpos($correo,"gmail.com");
+            $c=0;
+            echo "<br>"
+            for($i=0;$i<=strlen($nombre);$i++){
+                $x=substr($nombre,$i,1);
+                echo "letra ".$x."<br>";
+                if($x=="a"||$x=="e"||$x=="i"||$x=="o"||$x=="u" ){
+                    $c++;
+                }
+            }
+            echo "La cantidad de vocales en: " .$nombre. " es: ".$c;
+            echo "<br>";
+        }
+    ?>
+    <?php include "includes/footer.php";    ?>
+</body>
+</html>
+
+---------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <?php include "includes/header.php";
+        $carrito = ["Tablet", "Television","Computadora"]
+        echo "Mostramos el array primera forma: <br>";
+        foreach($carrito as $car){
+            echo $car "<br>";
+        }
+        echo "Mostramos el array con funciones: ";
+        // util para ver los contenidos de un array
+        echo "<pre>";
+        var_dump($carrito);
+        echo "<pre>";
+        echo "Buscamos el elemento Television en el array "
+        foreach($carrito as $car){
+            if($car == "Television"){
+                echo " <br> Elemento encontrado".$car;
+            }
+        }
+        echo "<br> Buscamos un elemento con funciones, Existe elemento?";
+        var_dump(in_array("Television",$carrito));
+        //Acceder a un elemento  del array
+        echo "Mostramos elemento de la posicion 1 del array";
+        echo $carrito[1];
+        echo "Añade un elemento en el indice 3 del arreglo";
+        $carrito[3]="Nuevo prodcuto...";
+        echo "Añadir un elemento nuevo al final...";
+        array_push($carrito,"Smartwatch");
+        //util para ver los contenidos de un array 
+        echo "<pre>";
+        var_dump($carrito);
+        echo "<pre>";
+        $clientes = array("cliente 1","cliente 2","cliente 3");
+        echo "<pre>";
+        include "includes/footer.php"
+    ?>
+</body>
+</html>
+
