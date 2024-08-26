@@ -1,0 +1,153 @@
+
+<?php   include "includes/header.php"; 
+        
+       
+        $cliente=[
+            
+            "nombre"=>"pedro ",
+            "paterno"=>"dominguez",
+            "ci"=>"1234",
+            "informacion"=>
+            [
+                "tipo"=>"docente",
+                "activa"=>"Si"
+            ]
+        ];
+        echo "El nombre del cliente es: ".$cliente["nombre"];
+        echo "<br>El apellido del cliente: ".$cliente["paterno"];
+        echo "<br>El CI del cliente: ".$cliente["ci"];
+        echo " <la> la persona se encuentra activa? ".$cliente["informacion"]["activa"];
+            echo "<pre>"
+            ,var_dump($cliente);
+            echo "</pre>"
+        
+        
+    ?>
+    <?php include "includes/footer.php";  ?>  
+
+
+    <?php   include "includes/header.php"; 
+        
+       
+        $estudiante=[
+            
+            "nombre"=>"pedro",
+            "paterno"=>"jimenez",
+            "ci"=>"1234",
+            "informacion"=>
+            [
+                "tipo"=>"estudiante",
+                "estado"=>"Inscrito"
+            ]
+        ];
+        echo "El nombre del estudiante es: ".$cliente["nombre"];
+        echo "<br>El apellido del estudiante: ".$cliente["paterno"];
+        echo "<br>El CI del estudiantente: ".$cliente["ci"];
+        echo " <la> la persona se encuentra inscrita? ".$cliente["informacion"]["estado"]; //hay un error en esta parte
+            echo "<pre>"
+            ,var_dump($estudiante);
+            echo "</pre>"
+        
+        
+    ?>
+    <?php include "includes/footer.php";  ?>  
+
+--------------3er--------------
+
+$clientes = [];
+        $clientes2 = array();
+        $clientes3 = array("Pedro", "Juanito", "karen");  
+        $cliente = [
+            "nombre"=> "Alcachofa",
+            "saldo"=> 200
+        ];
+        
+        echo "<br> El arreglo 1 esta vacio?";
+        var_dump(empty($clientes));
+        echo "<br> El arreglo 2 esta vacio?";
+        var_dump(empty($clientes2));
+        echo "<br> El arreglo 3 esta vacio?";
+        var_dump(empty($clientes3));
+
+        echo "<br> El arreglo 1 esta creado?";
+        var_dump(isset($clientes));
+        echo "<br> El arreglo 2 esta creado?";
+        var_dump(isset($clientes2));
+        echo "<br> El arreglo 3 esta creado?";
+        var_dump(isset($clientes3));
+        echo "<br> El arreglo 4 esta creado?";
+        var_dump(isset($clientes4));
+
+        echo "<br> El arreglo 1 tiene creado la propiedad nombre?";
+        var_dump(isset($cliente["nombre"]));
+        echo "<br> El arreglo 1 tiene creado la propiedad codigo?";
+        var_dump(isset($cliente["codigo"]));
+
+--------------------4-------------------
+
+$carrito = ["Tablet", "Computadora", "Television"];
+
+        var_dump( in_array("Tablet",$carrito));
+        var_dump( in_array("Audifonos",$carrito))
+        $numeros = array(10,3,40,2);
+        echo "ordenado de menor a mayor";
+        sort($numeros);
+        echo "<pre>";
+            var_dump($numeros);
+        echo "</pre>";
+
+        echo "<br> ordenado de mayor a menor";
+        rsort($numeros);
+        echo "<pre>"
+            ,var_dump($numeros);
+        echo "</pre>"
+
+        $nombres = array("pedro","maria","juan", "ana");
+        if(isset($nombres)){
+            echo "<br> Ordenado de menor a mayor" ;
+            sort($numeros);
+            echo "<pre>";
+                var_dump($nombres);
+            echo "</pre>";
+
+            echo "<br> Ordenado de mayor a menor" ;
+            rsort($numeros);
+            echo "<pre>";
+                var_dump($nombres);
+            echo "</pre>";
+        }
+
+---------------5---------------
+
+$productos = [
+            [
+                "nombre"=>"tablet",
+                "precio" => 200,
+                "disponible" => true
+            ],
+            [
+                "nombre"=>"Television 24`",
+                "precio" => 300,
+                "disponible" => true
+            ],
+            [
+                "nombre"=>"Monitor curvo",
+                "precio" => 400,
+                "disponible" => false
+            ]
+        ];
+
+        foreach($producto as $pro){
+            echo "<pre>";
+                var_dump($pro);
+            echo "</pre>";
+        }
+        foreach($productos as $producto){ ?>
+            <li>
+                <p>Producto : <?php echo $producto["nombre"]; ?></p>
+                <p>Precio : <?php echo $producto["precio"]; ?></p>
+                <p><?php echo $producto["disponible"]? "Disponible": "No disponible"; ?></p>
+            </li>
+        }
+        
+    ?>
